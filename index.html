@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="data:image/png;base64,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">
+    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</title>
+    <link rel="stylesheet" href="nav.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+    
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo-container">
+            <div class="logo">
+                <img src="./logo.webp" alt=""><span>.in</span>
+            </div>
+        </div>
+
+        <div class="location">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delivering to Bangaluru 754200 <br>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+              </svg><b>Update location</b>
+        </div>
+        <div class="search">
+            <div class="one">All &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg></div>
+              <input type="text" placeholder="Search Amazon.in">
+            
+            <div class="three"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+            </div>
+        </div>
+
+        <div class="lang">
+            <img src="./india-flag-icon.png" alt="">
+            <select name="language" id="">
+                
+                
+                
+                <option value="">English - EN</option>
+                <hr>
+                <option value="">हिन्दी - HI - अनुवाद</option>
+                <option value="">தமிழ் - TA - மொழிபெயர்ப்பு</option>
+                <option value="">తెలుగు - TE - అనువాదం</option>
+                <option value="">ಕನ್ನಡ - KN - ಭಾಷಾಂತರ</option>
+                <option value="">മലയാളം - ML - വിവർത്തനം</option>
+                <option value="">বাংলা - BN - অনুবাদ</option>
+                <option value="">मराठी - MR - भाषांतर</option>
+                learn more
+                
+            </select>
+        </div>
+        <div class="signIn">
+            <p>Hello, sign in <br>
+            <b>Account & list</b>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+        </p>
+        </div>
+
+        <div class="return">
+            <p>Returns <br><b>& Orders </b></p>
+        </div>
+        <div class="cart">
+            
+            <img src="./cart logo.png" alt="">
+            <b>cart</b>
+            <!-- <img img1 src="https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-2x-reorg-privacy._CB600086755_.png" alt="" > -->
+        </div>
+    </div>
+
+
+    <!-- ---------------------------<<nav -2>>-------------------------------- -->
+    <div class="nav2">
+        <div class="all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg><b>All</b>
+        </div>
+        
+        <div class="fresh">
+            <p>fresh</p><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+        </div>
+        <div class=""><p>Amazon miniTV</p></div>
+        <div class=""><p>Sell</p></div>
+        <div class=""><p>Best Sellers</p></div>
+        <div class=""><p>Today's Deals</p></div>
+        <div class=""><p>Mobiles</p></div>
+        <div class=""><p>Fashion</p></div>
+        <div class=""><p>Electronics</p></div>
+        <div class=""><p>Prime</p><svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg></div>
+        <div class=""><p>Home & Kitchen</p></div>
+        <div class=""><p>New Releases</p></div>
+        <div class=""><p>Customer Service</p></div>
+        <div class=""><p>Amazon Pay</p></div>
+        <div class=""><p>Computers</p></div>
+        <div class=""><p>Books</p></div>
+        <div class=""><p>Car & Moterbike</p></div>
+    </div>
+
+    <!-- --------------------------<<body>>------------------------------------- -->
+    <div class="mainpage">
+        <!-- <img src="./bg-mobile.jpg" alt="" height="600px" width="100%"> -->
+
+        <div class="space"></div>
+        <div class="row1">
+            <div class="box">
+                <p>Revamp your home in style</p>
+                <div class="top">
+                    
+                    <div class="img">
+                        <img src="./ac.jpg" alt="" height="100px" width="150px">Air Conditioner
+                    </div>
+                    <div class="img">
+                        <img src="./refrigirator.jpg" alt="" height="100px" width="150px">Refrigirator
+                    </div>
+                </div>
+                <div class="buttom">
+                    <div class="img"><img src="./micro ovan.jpg" alt="" height="100px" width="150px">Micro Ovan
+                    </div>
+                    <div class="img"><img src="washing machine.jpg" alt="" height="100px" width="150px">Washing Machine
+                    </div>
+                </div>
+                <a href="" style="text-decoration: none; margin-left: 15px; ">Explore all</a>
+            </div>
+
+            <div class="box">
+                <p>Appliances for your home | Up to 55% off</p>
+                <div class="top">
+                    <div class="img"><img src="./causin-cover.jpg" alt="" height="100px" width="150px">Cushion covers, bedsheets & more</div>
+                    <div class="img"><img src="./figurinous.jpg" alt="" height="100px" width="150px">Figurines, vases and moire</div>
+                </div>
+                <div class="buttom">
+                    <div class="img"><img src="home-storage.jpg" alt="" height="100px" width="150px">Home Storage</div>
+                    <div class="img"><img src="light.jpg" alt="" height="100px" width="150px">Lighting Solution</div>
+                </div>
+                <a href="" style="text-decoration: none; margin-left: 15px;;">Explore all</a>
+
+            </div>
+
+            <div class="box">
+                <p>Starting ₹99 | Amazon Brands & more</p>
+                <div class="top">
+                    <div class="img"><img src="./start179.jpg" alt="" height="100px" width="150px">Starting rps 179| Home decor</div>
+                    <div class="img"><img src="./storagebox.jpg" alt="" height="100px" width="150px">Up to 60% off|Stogage & racks</div>
+
+                </div>
+                <div class="buttom">
+                    <div class="img"><img src="./toy.jpg" alt="" height="100px" width="150px">Starting rps 99| Toys & games</div>
+                    <div class="img"><img src="./dresses.jpg" alt="" height="100px" width="150px">Upto 60% off| Jackets, dresses & more</div>
+                </div>
+                <a href="" style="text-decoration: none; margin-left: 15px;">Explore all</a>
+
+            </div>
+
+            <div class="box">
+                <p>Automotive essentials | Up to 60% off</p>
+                <div class="top">
+                    <div class="img"><img src="./causin-cover.jpg" alt="" height="100px" width="150px">Cushion covers, bedsheets & more</div>
+                    <div class="img"><img src="./figurinous.jpg" alt="" height="100px" width="150px">Figurines, vases and moire</div>
+                </div>
+                <div class="buttom">
+                    <div class="img"><img src="./causin-cover.jpg" alt="" height="100px" width="150px">Cushion covers, bedsheets & more</div>
+                    <div class="img"><img src="./figurinous.jpg" alt="" height="100px" width="150px">Figurines, vases and moire</div>
+                </div>
+                <a href="" style="text-decoration: none; margin-left: 15px;">Explore all</a>
+            </div>
+            <!-- <div class="space2"></div> -->
+        </div>
+
+<!-- ......................................<<row2>>........................................... -->
+
+        <div class="space2"></div>
+        <div class="row2">
+            <div class="box">
+                <p>Automotive essentials | Up to 60% off</p>
+                <div class="top">
+                    
+                    <div class="img">
+                        <img src="./cleaning.jpg" alt="" height="100px" width="150px">Cleaning Accesories
+                    </div>
+                    <div class="img">
+                        <img src="./vacume cleaner.jpg" alt="" height="100px" width="150px">Vacume Cleaner
+                    </div>
+                </div>
+                <div class="buttom">
+                    <div class="img"><img src="./tyre.jpg" alt="" height="100px" width="150px">Tyre & rim care
+                    </div>
+                    <div class="img"><img src="helmet.jpg" alt="" height="100px" width="150px">Helmets
+                    </div>
+                </div>
+                <!-- <a href="" style="text-decoration: none; text-align: end; margin-left: 15px;">See more</a> -->
+            </div>
+
+
+            <div class="box">
+                <p>Starting ₹199 | Amazon Brands & more</p>
+                <div class="top">
+                    
+                    <div class="img">
+                        <img src="bedsheet.jpg" alt="" height="100px" width="150px">Starting 199 | Bedsheets
+                    </div>
+                    <div class="img">
+                        <img src="screen.jpg" alt="" height="100px" width="150px">Starting 199 | Curtains
+                    </div>
+                </div>
+                <div class="buttom">
+                    <div class="img"><img src="ironing board.jpg" alt="" height="100px" width="150px">Min. 40% Off | Ironing boards & more
+                    </div>
+                    <div class="img"><img src="home decor.jpg" alt="" height="100px" width="150px">Uo to 60% off | Home decore
+                    </div>
+                </div>
+                <!-- <a href="" style="text-decoration: none; text-align: end; margin-left: 15px;">See more</a> -->
+            </div>
+
+
+            <div class="box">
+                <p>Up to 60% off | Styles for women</p>
+                <div class="top">
+                    
+                    <div class="img">
+                        <img src="women clothing.jpg" alt="" height="100px" width="150px">Women's clothes
+                    </div>
+                    <div class="img">
+                        <img src="footwear.jpg" alt="" height="100px" width="150px">Footweat + Handbags
+                    </div>
+                </div>
+                <div class="buttom">
+                    <div class="img"><img src="watches.jpg" alt="" height="100px" width="150px">Watches
+                    </div>
+                    <div class="img"><img src="jwellary.jpg" alt="" height="100px" width="150px">Fashion jwellary
+                    </div>
+                </div>
+                <a href="" style="text-decoration: none; text-align: end; margin-left: 15px;">Explore all</a>
+            </div>
+            <div class="box">
+                <p>Up to 60% off | Professional tools, testing & more</p>
+                <div class="top">
+                    
+                    <div class="img">
+                        <img src="professional tools.jpg" alt="" height="100px" width="150px">professional tools
+                    </div>
+                    <div class="img">
+                        <img src="measuring instrument.jpg" alt="" height="100px" width="150px">Measuring Instrument
+                    </div>
+                </div>
+                <div class="buttom">
+                    <div class="img"><img src="cleaning instrument.jpg" alt="" height="100px" width="150px">Cleaning Supplies
+                    </div>
+                    <div class="img"><img src="medical.jpg" alt="" height="100px" width="150px">Medical supplies
+                    </div>
+                </div>
+                <a href="" style="text-decoration: none; margin-left: 15px;">Explore all</a>
+            </div>
+        </div>
+
+<!-- ....................................<<row3>>................................ -->
+    <!-- <div class="row3-outer">    
+    <div class="row3">
+            <p>Related to items you've viewed</pp>
+           
+            
+            <div class="related-box">
+                <div class="related"><img src="pant1.jpg" alt=""></div>
+                <div class="related"><img src="pant2.jpg" alt=""></div>
+                <div class="related"><img src="pant3.jpg" alt=""></div>
+                <div class="related"><img src="pant4.jpg" alt=""></div>
+                <div class="related"><img src="pant5.jpg" alt=""></div>
+                <div class="related"><img src="figurinous2.jpg" alt=""></div>
+                <div class="related"><img src="pant1.jpg" alt=""></div>
+                <div class="related"><img src="pant2.jpg" alt=""></div>
+                <div class="related"><img src="pant3.jpg" alt=""></div>
+    
+            </div>
+        </div>
+    </div> -->
+
+        <!-- ................................<<row4>>............................................ -->
+        <div class="row4">
+            <p>Up to 75% off | Bestsellers curated from stores nearby</p>
+            <div class="image-container1 scroll">
+                <img src="row4-1.jpg" alt="Image 1">
+                <img src="row4-2.jpg" alt="Image 2">
+                <img src="row4-3.jpg" alt="Image 3">
+                <img src="row4-4.jpg" alt="Image 4">
+                <img src="row4-5.jpg" alt="Image 5">
+                <img src="row4-6.jpg" alt="Image 6">
+                <img src="row4-7.jpg" alt="Image 7">
+                <img src="row4-8.jpg" alt="Image 8">
+                <img src="row4-9.jpg" alt="Image 9">
+                <img src="row4-10.jpg" alt="Image 10">
+                <img src="row4-11.jpg" alt="Image 11">
+                <img src="row4-16.jpg" alt="Image 12">
+                <img src="row4-13.jpg" alt="Image 13">
+                <img src="row4-14.jpg" alt="Image 14">
+                <img src="row4-15.jpg" alt="Image 15">
+                <img src="row4-16.jpg" alt="Image 16">
+            </div>
+        </div>
+        <!-- ...................................<<row5>>...................................... -->
+        <div class="row5"> 
+            <p>Best Sellers in Computers & Accessories</p>  
+            <div class="image-container2 scroll">
+                <img src="router.jpg" alt="Image 1">
+                <img src="power bank 2.jpg" alt="Image 2">
+                <img src="smartwatch.jpg" alt="Image 3">
+                <img src="power bank 2.jpg" alt="Image 4">
+                <img src="smart watch 2.jpg" alt="Image 5">
+                <img src="smartwatch3.jpg" alt="Image 6">
+                <img src="row5-7.webp" alt="Image 7">
+                <img src="row5-8.webp" alt="Image 8">
+                <img src="row5-9.webp" alt="Image 9">
+                <img src="row5-10.webp" alt="Image 10">
+                <img src="row5-11.webp" alt="Image 11">
+                <img src="row5-12.webp" alt="Image 12">
+                <img src="row5-13.webp" alt="Image 13">
+                <img src="row5-14.webp" alt="Image 14">
+                <img src="row5-15.webp" alt="Image 15">
+                <img src="row5-16.webp" alt="Image 16">
+            </div>
+        </div>
+    <!-- .........................<<row6>>............................... -->
+    <div class="row6">
+        <div class="box">
+            <p>Customers’ Most-Loved products</p>
+            <div class="top">
+                <img src="6box1.jpg" alt="" height="150px" width="150px">
+                <img src="6box2.jpg" alt="" height="150px" width="150px">
+                
+            </div>
+            <div class="buttom">
+                <img src="6box3.jpg" alt="" height="150px" width="150px">
+                <img src="6box4.jpg" alt="" height="150px" width="150px">
+            </div>
+            <!-- <a href="" style="text-decoration: none; margin-left: 20px;">see more</a> -->
+        </div>
+
+        <div class="box">
+            <p>Best Sellers in Toys & Games</p>
+            <div class="top">
+                <img src="6box5.jpg" alt="" height="150px" width="150px">
+                <img src="6box6.jpg" alt="" height="150px" width="150px">
+            </div>
+            <div class="buttom">
+                <img src="6box7.jpg" alt="" height="150px" width="150px">
+                <img src="6box8.jpg" alt="" height="150px" width="150px">
+            </div>
+            <!-- <a href="" style="text-decoration: none; margin-left: 20px;">see more</a> -->
+        </div>
+
+        <div class="box">
+            <p>Starting ₹99 | Start your fitness journey</p>
+            <img src="6box9.jpg" alt="" height="310px" width="310" style="margin-left: 20px;">
+            <!-- <a href="" style="text-decoration: none; margin-left: 20px;">see more</a> -->
+        </div>
+
+        <div class="box">
+            <p>Customers’ Most-Loved Fashion for you</p>
+            <div class="top">
+                <img src="6box10.jpg" alt="" height="150px" width="60px">
+                <img src="6box11.jpg" alt="" height="150px" width="60px">
+            </div>
+            <div class="buttom">
+                <img src="6box12.jpg" alt="" height="150px" width="70px">
+                <img src="6box13.jpg" alt="" height="150px" width="70px">
+            </div>
+            <!-- <a href="" style="text-decoration: none; margin-left: 20px;">see more</a> -->
+        </div>
+    </div>
+    <!-- ..........................<<row7>>>............................... -->
+        <div class="row7">
+            <p>More items to consider</p>
+            <div class="image-container1 scroll">
+                <img src="row7-1.jpg" alt="Image 1">
+                <img src="row7-2.jpg" alt="Image 2">
+                <img src="row7-3.jpg" alt="Image 3">
+                <img src="row7-4.jpg" alt="Image 4">
+                <img src="row7-5.jpg" alt="Image 5">
+                <img src="row7-6.jpg" alt="Image 6">
+                <img src="row7-7.jpg" alt="Image 7">
+                <img src="row7-8.jpg" alt="Image 8">
+                <img src="row7-9.jpg" alt="Image 9">
+                <img src="row7-10.jpg" alt="Image 10">
+                <img src="row7-11.jpg" alt="Image 11">
+            </div>
+        </div>
+<!-- ..........................<<row8>>............................................... -->
+    <div class="row8">
+        <div class="container">
+            <div class="img">
+                <img src="row8.jpg" alt="" height="100%" width="90%">
+            </div>
+            <div class="right">
+                <p>LiMETRO STEEL Stainless Steel Dish Drainer | After <br>Wash Utensils Basket (Disk rack with Tray)</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="orange" class="bi bi-star-half" viewBox="0 0 16 16">
+                    <path d="M5.354 5.119 7.538.792A.52.52 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.54.54 0 0 1 16 6.32a.55.55 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.5.5 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.6.6 0 0 1 .085-.302.51.51 0 0 1 .37-.245zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.56.56 0 0 1 .162-.505l2.907-2.77-4.052-.576a.53.53 0 0 1-.393-.288L8.001 2.223 8 2.226z"/>
+                  </svg>&nbsp;&nbsp;&nbsp;4,835
+                  <div class="line" style="display: flex;">
+                  <p style="color: red; font-size: 23px; margin-top: 5px;">-57%</p>
+                  <p style="margin-top: 5px;">&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                    <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
+                  </svg>1,299<sup style="font-size: 10px;">00</sup></p>
+                  <p style=" margin-left: 5px; font-size: 13px;">M.R.P.</p>
+                  <p style="margin-top: 7px; text-decoration: line-through; font-size: 15px; margin-top: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                    <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
+                  </svg>2,999</p>
+                  <p style="color: rgb(6, 168, 232); font-weight: 1000px; margin-top: 10px; margin-left: 5px; font-size: 15px;"><b>prime</b></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+        <!-- .........................<<row9>>............................ -->
+
+    <div class="row9">
+        <div class="box1">
+            <div class="text"><p>Minimum 50% off | Indoor plants</p></div>
+            <div class="img"><img src="pot.jpg" alt="" height="230px" width="310px"></div>
+            <!-- <a href="" style="text-decoration: none; color: rgb(16, 106, 142); margin-left: 15px; margin-top: 10px;">see more</a> -->
+        </div>
+        <div class="box2">
+            <div class="text">
+                <p>Limited Time Deal</p>
+            </div>
+            <div class="img" style="height: 45%; width: 80%; margin-left: 30px;">
+                <img src="row8.jpg" alt="" style="height: 180px; width: 200px; margin-left: 20px; margin-top: -10px;">
+            </div>
+            <div class="text2">
+                <p style="margin-left: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: larger; font-size: 15px; ">LiMETRO STEEL Stainless Steel Dish Drainer | After Wash Utensils Basket (Disk rack with Tray)</p>
+            </div>
+            <a href="" style="color: rgb(24, 93, 120); text-decoration: none; margin-left: 20px; margin-top: 20px;">shop now</a>
+        </div>
+        <div class="box4">
+            <div class="text"><p>Zakir Khan's Chacha Vidhayak Hain Humare | Watch Now</p></div>
+            <div class="img">
+                <img src="miniTV.jpg" alt="" ">
+            </div>
+            <a href="" style="color: rgb(18, 94, 125); text-decoration: none; margin-left: 20px; margin-bottom: -10px;">Checkout other exciting shows on miniTV</a>
+        </div>
+
+        <div class="box3">
+            <div class="text"><p class="p1">EMI starting at ₹105/day | Electric vehicles & motorbikes</p></div>
+            <div class="img">
+                <img src="row9-box3.jpg" alt="">
+            </div>
+            <div class="text2">
+                <p style="margin-left: 20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 1000;">Franklin EV Nixdlx (TSL-4) Lithum Battery -Electric Scooter by Franklin EV - With Extra Accessories - c.. <br><p style="font-weight: 1000; font-family:'Times New Roman', Times, serif; font-size: 18px; margin-left: 10px;">81,999</p></p>
+            
+            </div>
+        </div>
+    </div>
+    <!-- ...........................<<row10>>................................. -->
+        <div class="row10"> 
+            <p>Up to 70% off | Bestsellers from Indian artisans</p>  
+            <div class="image-container2 scroll">
+                <img src="row10-1.jpg" alt="Image 1">
+                <img src="row10-2.jpg" alt="Image 2">
+                <img src="row10-3.jpg" alt="Image 3">
+                <img src="row10-4.jpg" alt="Image 4">
+                <img src="row10-5.jpg" alt="Image 5">
+                <img src="row10-6.jpg" alt="Image 6">
+                <img src="row10-7.jpg" alt="Image 7">
+                <img src="row10-8.jpg" alt="Image 8">
+                <img src="row10-9.jpg" alt="Image 9">
+                <img src="row10-10.jpg" alt="Image 10">
+                <img src="row10-11.jpg" alt="Image 11">
+                <img src="row10-12.jpg" alt="Image 12">
+                <img src="row10-13.jpg" alt="Image 13">
+                <img src="row10-14.jpg" alt="Image 14">
+                <img src="row10-15.jpg" alt="Image 15">
+                <img src="row10-16.jpg" alt="Image 16">
+            </div>
+        </div>
+    <!-- ........................<<row11>>................................ -->
+    <div class="row11">
+        <div class="text">
+            <p style="font-weight: 600; font-size: 16px; margin-top: 10px;">See personalized recommendations</p>
+            <button style="font-size: 14px; width: 200px; height: 30px; border-radius: 4px; background-color: rgb(244, 179, 39); border-color: orange; margin-top: -12px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><b>Sign in</b></button>
+            <!-- <input type="button" value="" style="width: 200px; height: 30px; border-radius: 4px; background-color: rgb(244, 179, 39); border-color: orange; margin-top: -12px;"> -->
+            <p style="font-size: 14px; margin-top: 5px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 600;;">New customer <a href="" style="color: rgb(0, 183, 255);  text-decoration: none">Start here</a></p>
+        </div>
+    </div>
+    <!-- ...............................<<row12>>................................ -->
+    <a href="" style="text-decoration: none; color: white;">
+        <div class="row12">
+            <p>Back to top</p>
+        </div>
+    </a>
+    <!-- ..........................<<footer1>>................................ -->
+    <div class="footer1">
+        <div class="fone" style="color: white; padding-left: 300px;">
+            <p>Get to Know <br>Us</p>
+            <a href="">About us</a><br>
+            <a href="">Careers</a><br>
+            <a href="">Press Realeases</a><br>
+            <a href="">Amazon Science</a><br>
+        </div>
+        <div class="ftwo">
+            <p style="color: white; font-size: 18px; margin-top: 30px; font-size: 15px; margin-left: 100px;"><b>Connect with <br>Us</b></p>
+            <a href="">Facebook</a>
+            <br><a href="">Twitter</a>
+            <br><a href="">Instagram</a>
+        </div>
+        <div class="fthree">
+            <p>Make Money with Us</p>
+            <a href="">Sell on Amazon</a>
+            <br><a href="">Sell under Amazon Accelerator</a>
+            <br><a href="">Protect and Build Your Brand</a>
+            <br><a href="">Amazon Global Selling</a>
+            <br><a href="">Become an Affiliate</a>
+            <br><a href="">Fulfilment by Amazon</a>
+            <br><a href="">Advertise Your Products</a>
+            <br><a href="">Amazon Pay on Merchants</a>
+        </div>
+        <div class="ffour">
+            <p>Let Us Help You</p>
+            <a href="">COVID-19 and Amazon</a>
+            <br><a href="">Your Account</a>
+            <br><a href="">Returns Centre</a>
+            <br><a href="">Recalls and Product Safety Alerts</a>
+            <br><a href="">100% Purchase Protection</a>
+            <br><a href="">Amazon App Download</a>
+            <br><a href="">Help</a>
+        </div>
+    </div>
+    <!-- ............................<<footer2>>........................... -->
+    <div class="hr" style="height: 1px; width: 100%; border: 0.01px rgb(72, 71, 71) solid;"></div>
+    <div class="footer2">
+        <div class="flogo">
+            <a href=""><img src="logo.webp" alt=""></a>
+        </div>
+        <div class="lang">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+            </svg>
+            English
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16" style="margin-top: 4px;">
+            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+              <!-- <div class="langchoose"> -->
+        </div>
+        <div class="nation">
+            <img src="india-flag-icon.png" alt="">
+            <p>India</p>
+        </div>
+    </div>
+    <!-- footer3 -->
+     <div class="footer3">
+        <div class="upper">
+            <div class="box">
+                <a href="">
+                    <b>AbeBooks</b><br>
+                    Books, art <br>
+                    & collectibles <br>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <b>Amazon Web Services</b><br>
+                    Scalable Cloud<br>
+                    Computing Services</a><br>
+            </div>
+            <div class="box">
+                <a href="">
+                   <b> Audible</b><br>
+                    Download<br>
+                    Audio Books<br>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <b>IMDb</b><br>
+                        Movies, TV<br>
+                        & Celebrities
+                </a>
+            </div>
+        </div>
+        <div class="lower">
+            <div class="box">
+                <a href="">
+                    <b>Shopbop</b><br>
+                    Designer<br>
+                    Fashion Brands<br>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <b>Amazon Business</b><br>
+                    Everything For<br>
+                    Your Business<br>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <b>Prime Now</b> <br>
+                    2-Hour Delivery <br>
+                    on Everyday Items <br>
+                </a>
+            </div>
+            <div class="box">
+                <a href="">
+                    <b>Amazon Prime Music</b> <br>
+                    100 million songs, ad-free <br>
+                    Over 15 million podcast episodes <br>
+                </a>
+            </div>
+        </div>
+        <div class="lastlower">
+            
+                <a href="" style="margin-left: 30px;">Conditions of Use & Sale</a>&nbsp;&nbsp;  <a href="">Privacy Notice</a> &nbsp;&nbsp;<a href="">Interest-Based Ads</a><br>
+                <p style="margin-left: 50px; margin-top: 10px;">© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+            
+        </div>
+     </div>
+</body>
+</html>
